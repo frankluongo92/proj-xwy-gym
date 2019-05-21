@@ -1,5 +1,7 @@
 # XWY Gym
 
+## Project Summary
+
 This project comes from [FakeClients.com](https://fakeclients.com/) and is basedo on the following prompt:
 
 > Hey,
@@ -12,3 +14,8 @@ The end goal is to do the following:
 - Create the UX Wireframes for their web application
 - Design Pages for their web application
 - Build The Web Application using a modern tech stack
+
+
+## Technologies
+- Web Application built in [Server-Side Rendered React with Next.js](https://nextjs.org/)
+
