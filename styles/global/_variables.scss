@@ -1,0 +1,5 @@
+$spacing-unit: 1rem;
+
+@function space($num) {
+  @return $spacing-unit * $num;
+}
