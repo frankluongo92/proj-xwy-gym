@@ -19,3 +19,14 @@ The end goal is to do the following:
 ## Technologies
 - Web Application built in [Server-Side Rendered React with Next.js](https://nextjs.org/)
 
+### Next JS Commands
+Start up the server
+```
+npm run dev
+```
+
+Start up the server on a custom port
+```
+npm run dev -- -p 1234
+```
+

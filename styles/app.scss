@@ -1,3 +1,11 @@
-@import "./global/all";
+@import "./foundation/all";
+
+@import "./global/reset";
+@import "./global/body";
+@import "./global/links";
+@import "./global/navigation";
+@import "./global/typography";
+
+@import "./elements/styled_list";
 
 @import "./components/header";

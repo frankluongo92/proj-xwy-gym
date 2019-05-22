@@ -1,11 +1,13 @@
 import React from 'react'
-import Link from 'next/link';
+
+import Navigation from './Navigation';
 
 const Header = () => {
   return (
     <header className="header">
-      <Link href="/"><a>Home</a></Link>
-      <Link href="/about"><a>About</a></Link>
+      <Navigation
+        customClassName="header-navigation"
+      />
     </header>
   )
 }

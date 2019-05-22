@@ -2,5 +2,26 @@
   display: flex;
   justify-content: space-around;
 
+  text-align: center;
+
   padding: space(1);
+
+  background-color: gray(0);
+}
+
+.header-navigation__link {
+  color: gray(9);
+  font-family: $heading;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  transition: color 0.15s ease-in-out;
+
+  &:focus,
+  &:hover {
+    color: blue(5);
+  }
+
+
 }
