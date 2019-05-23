@@ -4,7 +4,7 @@
 
   text-align: center;
 
-  padding: space(1);
+  padding: space(1) 0;
 
   background-color: gray(0);
 }
@@ -24,4 +24,12 @@
   }
 
 
+}
+
+.header-navigation__styled-list li {
+  border-right: 2px solid gray(9);
+
+  &:last-of-type {
+    border-right: none;
+  }
 }

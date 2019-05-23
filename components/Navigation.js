@@ -5,7 +5,6 @@ import StyledList from '../elements/StyledList';
 
 const Navigation = ({ customClassName }) => {
   const navLinks = [
-    { url: "/", name: "Home" },
     { url: "/personal-training", name: "Personal Training" },
     { url: "/meal-plans", name: "Meal Plans" },
     { url: "/tutorials", name: "Tutorials" },
@@ -17,6 +16,7 @@ const Navigation = ({ customClassName }) => {
 
   return (
     <nav className={`navigation ${customClassName}`}>
+      <div className={`logo logo--${customClassName}`}></div>
       <StyledList customClass={customClassName}>
         {navLinks.map(({url, name}, index) => (
           <li className="styled-list__item" key={index}>

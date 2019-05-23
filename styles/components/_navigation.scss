@@ -1,0 +1,6 @@
+.header-navigation {
+  @include container;
+  display: grid;
+  grid-gap: space(1);
+  grid-template-columns: auto 1fr;
+}

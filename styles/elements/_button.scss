@@ -1,0 +1,29 @@
+.button {
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+.button--default {
+  font-size: 1rem;
+}
+
+.button--primary {
+  color: gray(0);
+
+  background-color: blue(5);
+
+  transition: background-color 0.15s ease-in-out;
+
+  &:focus,
+  &:hover {
+    background-color: blue(7);
+  }
+}

@@ -1,8 +1,8 @@
-import Link from 'next/link';
+import Hero from '../components/Hero';
 
 const Home = () => {
   return (
-    <div>Welcome to Next.js!</div>
+    <Hero />
   )
 }
 
