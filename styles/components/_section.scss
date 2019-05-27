@@ -1,0 +1,27 @@
+.section {
+  position: relative;
+  display: flex;
+
+  padding: space(1) 0;
+
+  background-color: gray(8);
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: blue(6);
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+  }
+}
+
+
+@include breakpoint(small) {
+  .section {
+    min-height: 90vh;
+  }
+}

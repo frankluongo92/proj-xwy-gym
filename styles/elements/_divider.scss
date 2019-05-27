@@ -1,0 +1,9 @@
+.divider {
+  height: pixelsToRems(4);
+
+  margin: space(1) 0;
+
+  &--light {
+    fill: gray(1);
+  }
+}

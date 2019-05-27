@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 
 import StyledList from '../elements/StyledList';
+import Logo from '../svgs/Logo';
 
 const Navigation = ({ customClassName }) => {
   const navLinks = [
@@ -16,7 +17,7 @@ const Navigation = ({ customClassName }) => {
 
   return (
     <nav className={`navigation ${customClassName}`}>
-      <div className={`logo logo--${customClassName}`}></div>
+      <Logo classNames={`logo logo--${customClassName}`} />
       <StyledList customClass={customClassName}>
         {navLinks.map(({url, name}, index) => (
           <li className="styled-list__item" key={index}>

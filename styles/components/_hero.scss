@@ -1,9 +1,27 @@
 .hero {
+  position: relative;
+
   @include container;
   display: grid;
   grid-gap: space(1);
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
 }
+
+  .hero__text {
+    padding: space(1) 0;
+  }
+
+    .hero__h1 {
+      color: gray(1);
+      text-shadow: 0 1px 9px gray(9);
+    }
+
+    .hero__copy {
+      margin-bottom: space(1.5);
+
+      color: gray(2);
+    }
 
 
 @include breakpoint (small down) {
@@ -24,8 +42,7 @@
   }
 
   .hero__text {
-    grid-column: 1 / span 4;
-    z-index: 1;
+    grid-column: 1 / span 5;
   }
 
   .hero__image-wrapper {

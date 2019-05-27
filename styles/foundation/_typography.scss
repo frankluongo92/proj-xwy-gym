@@ -1,3 +1,31 @@
 $heading: #{'Teko', sans-serif};
 $body: #{'Montserrat', sans-serif};
 
+@mixin h1 {
+  font-family: $heading;
+  font-size: 2rem;
+  letter-spacing: 0;
+  line-height: 1.01;
+  text-transform: uppercase;
+
+  @include breakpoint (small) {
+    font-size: 3rem;
+  }
+
+  @include breakpoint (medium) {
+    font-size: 4.5rem;
+  }
+}
+
+@mixin copy {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@mixin copy-large {
+  font-size: 1rem;
+
+  @include breakpoint (small) {
+    font-size: 1.125rem;
+  }
+}

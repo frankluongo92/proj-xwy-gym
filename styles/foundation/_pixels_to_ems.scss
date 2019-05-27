@@ -1,3 +1,7 @@
 @function pixelsToEms($pixels) {
   @return #{$pixels/16}em;
 }
+
+@function pixelsToRems($pixels) {
+  @return #{$pixels/16}rem;
+}
