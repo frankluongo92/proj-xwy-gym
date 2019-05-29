@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback } from 'react'
 import { Waypoint } from 'react-waypoint';
 
 import Divider from '../elements/Divider';
@@ -6,6 +6,15 @@ import Button from '../elements/Button';
 import { animated, useSpring } from 'react-spring';
 
 const Hero = () => {
+  const [props, set] = useSpring(() => ({ y: 0, xy: [0, 0], config: { mass: 10, tension: 150, friction: 240 } }))
+
+  const onScroll = useCallback(
+    (offset) => {
+      set({ y: offset })
+      return offset;
+    }, [props]
+  );
+
   const animation = useSpring({
     opacity: 1,
     from: { opacity: 0 }
@@ -13,10 +22,10 @@ const Hero = () => {
 
   const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
   const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
-  // const onScroll = useCallback(e => set({ st: e.target.scrollTop / 30 }), [])
+  const parallax = (y) => `translate3d(0, -${y / 5}px, 0)`
 
   function updateScrollPosition() {
-    console.log('were scrolling');
+    onScroll(window.pageYOffset);
   }
 
   const observeScroll = () => {
@@ -27,23 +36,17 @@ const Hero = () => {
     window.removeEventListener('scroll', updateScrollPosition);
   }
 
-  const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 50, tension: 450, friction: 240 } }))
-
   return (
-    <Waypoint
-      onEnter={observeScroll}
-      onLeave={unobserveScroll}
-      bottomOffset="50"
-    >
+    <Waypoint onEnter={observeScroll} onLeave={unobserveScroll}>
       <animated.section className="hero" style={animation}>
-        <section className="hero__text">
+        <animated.section style={{ transform: props.y.interpolate(parallax) }} className="hero__text">
           <h1 className="hero__h1">Personalized Training for every body</h1>
           <Divider />
           <p className="hero__copy copy--large">
             Lorem ipsum dolor amet jianbing YOLO organic cray XOXO farm-to-table helvetica vegan gentrify kale chips narwhal.
           </p>
           <Button>Start Today</Button>
-        </section>
+        </animated.section>
         <section
           className="hero__image-wrapper"
           onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
