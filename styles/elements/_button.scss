@@ -1,3 +1,12 @@
+@keyframes Gradient {
+	0% {
+		background-position: 0% 0%
+	}
+	100% {
+		background-position: 200% 100%
+	}
+}
+
 .button {
   display: inline-block;
   padding: 0.5em 1em;
@@ -18,12 +27,16 @@
 .button--primary {
   color: gray(0);
 
-  background-color: blue(5);
+  background: linear-gradient(to right, blue(5) 0%, blue(8) 100%);
+  background-size: 200% 200%;
 
-  transition: background-color 0.15s ease-in-out;
+  transition: transform 150ms ease-in-out;
 
   &:focus,
   &:hover {
-    background-color: blue(7);
+    transform: scale(1.25);
+    -webkit-animation: Gradient 500ms ease;
+    -moz-animation: Gradient 500ms ease;
+    animation: Gradient 500ms ease;
   }
 }

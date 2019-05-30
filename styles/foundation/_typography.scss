@@ -17,13 +17,33 @@ $body: #{'Montserrat', sans-serif};
   }
 }
 
+@mixin h2 {
+  font-family: $heading;
+  font-size: 1.5rem;
+  letter-spacing: 0;
+  line-height: 1.01;
+  text-transform: uppercase;
+
+  @include breakpoint (small) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint (medium) {
+    font-size: 3rem;
+  }
+}
+
 @mixin copy {
   font-size: 0.875rem;
   line-height: 1.6;
+
+  max-width: 38rem;
 }
 
 @mixin copy-large {
   font-size: 1rem;
+
+  max-width: 38rem;
 
   @include breakpoint (small) {
     font-size: 1.125rem;

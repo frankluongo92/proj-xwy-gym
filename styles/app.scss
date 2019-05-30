@@ -2,6 +2,7 @@
 
 @import "./global/reset";
 @import "./global/body";
+@import "./global/layout";
 @import "./global/links";
 @import "./global/navigation";
 @import "./global/typography";
@@ -17,6 +18,7 @@
 @import "./components/hero";
 @import "./components/navigation";
 @import "./components/section";
+@import "./components/section_heading";
 
 
 // transform: rotate(30deg);

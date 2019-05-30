@@ -2,10 +2,7 @@
   position: relative;
 
   @include container;
-  display: grid;
-  grid-gap: space(1);
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
+  @include grid;
 }
 
   .hero__text {
@@ -13,8 +10,8 @@
   }
 
     .hero__h1 {
-      color: gray(1);
-      text-shadow: 0 1px 9px gray(9);
+      color: gray(0);
+      @include text-shadow;
     }
 
     .hero__copy {

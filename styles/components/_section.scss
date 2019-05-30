@@ -1,10 +1,5 @@
-.section {
-  position: relative;
-  display: flex;
-
-  padding: space(1) 0;
-
-  background-color: gray(8);
+@mixin section-theme($section-background, $overlay-color, $overlay-shape) {
+  background-color: $section-background;
 
   &:before {
     content: '';
@@ -14,14 +9,37 @@
     right: 0;
     bottom: 0;
 
-    background-color: blue(6);
-    clip-path: polygon(0 0, 100% 100%, 100% 0);
+    background-color: $overlay-color;
+    clip-path: $overlay-shape;
   }
+}
+
+.section {
+  position: relative;
+
+  &--blue-gray {
+    @include section-theme(gray(8), blue(6), polygon(0 0, 100% 100%, 100% 0));
+  }
+
+  &--red-gray {
+    @include section-theme(gray(8), secondary(red), polygon(0 0, 100% 100%, 100% 0));
+  }
+
+  &--darkblue-white {
+    @include section-theme(gray(0), blue(8), polygon(0 0, 0% 100%, 100% 0));
+  }
+}
+
+.section__content {
+  position: relative;
+  display: flex;
+
+  padding: space(1) 0;
 }
 
 
 @include breakpoint(small) {
-  .section {
+  .section__content {
     min-height: 100vh;
   }
 }

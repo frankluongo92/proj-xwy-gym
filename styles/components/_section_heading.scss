@@ -1,0 +1,19 @@
+.section-heading-container {
+  padding: space(3) 0;
+}
+
+.section-heading--light .section-heading__heading {
+  color: gray(0);
+}
+.section-heading--light .section-heading__copy {
+  color: gray(2)
+}
+
+.section-heading__heading,
+.section-heading__copy {
+  @include text-shadow;
+}
+
+.section-heading__heading {
+  margin-bottom: space(1);
+}
