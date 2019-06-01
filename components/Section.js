@@ -11,7 +11,7 @@ const Section = ({ children, theme }) => {
 }
 
 Section.defaultProps = {
-  theme: ''
+  theme: '',
 };
 
 export default Section
