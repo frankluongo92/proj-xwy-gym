@@ -1,0 +1,17 @@
+.list {
+  padding: space(1) 0;
+
+  li {
+    display: block;
+    margin-bottom: space(0.5);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: "-";
+      margin-right: space(0.5);
+    }
+  }
+}

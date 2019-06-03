@@ -33,6 +33,11 @@
 }
 
 @include breakpoint (small) {
+  .hero {
+    padding-top: 30vh;
+    padding-bottom: 30vh;
+  }
+
   .hero__text,
   .hero__image-wrapper {
     grid-row: 1;

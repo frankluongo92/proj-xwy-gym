@@ -33,13 +33,7 @@
 .section__content {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
 
   padding: space(1) 0;
-}
-
-
-@include breakpoint(small) {
-  .section__content {
-    min-height: 100vh;
-  }
 }

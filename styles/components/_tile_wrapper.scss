@@ -1,0 +1,17 @@
+.tile-wrapper {
+}
+
+@include breakpoint (medium) {
+  .tile-wrapper {
+    display: grid;
+    grid-gap: space(1);
+
+    grid-template-areas:
+      "a c"
+      "a c"
+      "b c"
+      "b d"
+      "b d"
+    ;
+  }
+}
