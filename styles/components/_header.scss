@@ -1,18 +1,30 @@
-.header {
-  position: fixed;
+.header-fix {
+  position: absolute;
   top: 0;
   left: 0;
-
   width: 100%;
+
+  padding-top: space(3);
+
+  pointer-events: none;
+}
+
+.header {
+  position: fixed;
+  left: 5%;
+
+  width: 90%;
 
   display: flex;
   justify-content: space-around;
 
   text-align: center;
 
+  margin-top: space(2);
   padding: space(1) 0;
 
   background-color: rgba(255, 255, 255, 0.75);
+  transition: margin 150ms ease-in-out;
 }
 
 .header-navigation__link {

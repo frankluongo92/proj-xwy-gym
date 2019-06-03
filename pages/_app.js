@@ -25,7 +25,9 @@ class MyApp extends App {
           <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Teko:700&display=swap" rel="stylesheet" />
         </Head>
         <Header />
-        <Component {...pageProps} />
+        <main className="main-content">
+          <Component {...pageProps} />
+        </main>
       </Container>
     );
   }

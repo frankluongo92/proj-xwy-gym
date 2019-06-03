@@ -6,3 +6,9 @@
   @include container;
   @include grid;
 }
+
+.layout {
+  &:first-of-type {
+    padding-top: space(5);
+  }
+}

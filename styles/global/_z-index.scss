@@ -9,6 +9,7 @@
   z-index: 1;
 }
 
-.section:before {
+.section:before,
+.header-fix {
   z-index: 0;
 }

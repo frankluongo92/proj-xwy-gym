@@ -21,7 +21,7 @@ const Navigation = ({ customClassName }) => {
       <StyledList customClass={customClassName}>
         {navLinks.map(({url, name}, index) => (
           <li className="styled-list__item" key={index}>
-            <Link href={url}><a className={`link ${customClassName}__link`}>{name}</a></Link>
+            <Link href={url}><a className={`link ${customClassName}__link draw-link`}>{name}</a></Link>
           </li>
         ))}
       </StyledList>
