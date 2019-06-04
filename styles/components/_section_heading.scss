@@ -10,8 +10,7 @@
   color: gray(2)
 }
 
-.section-heading__heading,
-.section-heading__copy {
+.section-heading__heading {
   @include text-shadow;
 }
 

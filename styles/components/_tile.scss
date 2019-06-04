@@ -1,5 +1,26 @@
 .tile {
-  border: 1px solid red;
+  position: relative;
+
+  width: 100%;
+  padding: space(2);
+
+  font-weight: bold;
+
+  background-blend-mode: overlay;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+
+  &:before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
   &:nth-child(1) {
     grid-area: a;
@@ -12,5 +33,82 @@
   }
   &:nth-child(4) {
     grid-area: d;
+  }
+}
+
+.tile--blue {
+
+  color: gray(1);
+
+  background-color: secondary(blue);
+  background-image: url('/static/images/jonathan-borba-1339221-unsplash.jpg');
+
+  &:before {
+    background-color: secondary(blue);
+    clip-path: polygon(80% 0, 100% 0, 100% 100%, 60% 100%);
+  }
+}
+
+.tile--green {
+
+  color: gray(9);
+
+  background-color: lighten(secondary(green), 10);
+  background-image: url('/static/images/meghan-holmes-1057329-unsplash.jpg');
+
+  &:before {
+    background-color: secondary(green);
+    clip-path: polygon(0 50%, 100% 80%, 100% 100%, 0 100%);
+  }
+}
+
+.tile--yellow {
+
+  color: gray(9);
+
+  background-color: secondary(yellow);
+  background-image: url('/static/images/danielle-cerullo-782570-unsplash.jpg');
+
+  &:before {
+    background-color: secondary(yellow);
+    clip-path: polygon(-1% 0, 30% 0, 15% 100%, 0% 100%);
+  }
+}
+
+.tile--red {
+
+  color: gray(1);
+
+  background-color: secondary(red);
+  background-image: url('/static/images/victor-freitas-546919-unsplash.jpg');
+
+
+  &:before {
+    background-color: secondary(red);
+    clip-path: polygon(0 0, 101% 0, 101% 60%, 0 25%);
+  }
+}
+
+
+  .tile__content {
+    position: relative;
+  }
+
+    .tile__copy,
+    .tile__list {
+      padding-top: space(2);
+      padding-bottom: space(2);
+    }
+
+
+@include breakpoint (medium down) {
+  .tile {
+    margin-bottom: space(1);
+  }
+}
+
+@include breakpoint (medium) {
+  .tile {
+    padding: space(3);
   }
 }

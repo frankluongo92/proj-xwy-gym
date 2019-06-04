@@ -1,11 +1,17 @@
 import React from 'react'
 
-const Tile = ({ size, children}) => {
+const Tile = ({ color, children}) => {
   return (
-    <li className={`tile tile--${size}`}>
-      { children }
+    <li className={`tile tile--${color}`}>
+      <div className="tile__content">
+        { children }
+      </div>
     </li>
   )
 }
+
+Tile.defaultProps = {
+  color: 'default'
+};
 
 export default Tile
