@@ -1,10 +1,11 @@
 import React from 'react'
+import { animated } from 'react-spring';
 
-const StyledList = ({ children, customClass }) => {
+const StyledList = ({ children, customClass, animation }) => {
   return (
-    <ul className={`styled-list ${customClass}__styled-list`}>
+    <animated.ul className={`styled-list ${customClass}__styled-list`} style={animation}>
       { children }
-    </ul>
+    </animated.ul>
   )
 }
 

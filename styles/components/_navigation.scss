@@ -2,5 +2,12 @@
   @include container;
   display: grid;
   grid-gap: space(1);
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 2fr 1fr;
 }
+
+@include breakpoint (medium) {
+  .header-navigation {
+    grid-template-columns: auto 1fr;
+  }
+}
+

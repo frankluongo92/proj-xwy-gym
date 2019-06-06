@@ -8,6 +8,7 @@ import { animated, useSpring } from 'react-spring';
 const Hero = () => {
   // config: { mass: 10, tension: 150, friction: 240 }
   const [props, set] = useSpring(() => ({ y: 0, xy: [0, 0] }))
+  const threshold = window.matchMedia("(min-width: 960px)");
 
   const onScroll = useCallback(
     (offset) => {
@@ -31,12 +32,22 @@ const Hero = () => {
   }
 
   const observeScroll = () => {
-    window.addEventListener('scroll', updateScrollPosition);
+    if (window.outerWidth > 768) {
+      window.addEventListener('scroll', updateScrollPosition);
+    } else {
+      unobserveScroll();
+    }
   }
 
   const unobserveScroll = () => {
     window.removeEventListener('scroll', updateScrollPosition);
   }
+
+  const removeScrollListener = ({ matches }) => {
+    if (!matches) { unobserveScroll(); }
+  }
+
+  threshold.addListener(removeScrollListener);
 
   return (
     <Waypoint onEnter={observeScroll} onLeave={unobserveScroll}>

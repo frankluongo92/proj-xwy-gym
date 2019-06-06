@@ -30,22 +30,22 @@ const Home = () => {
             <li>hella crucifix aesthetic portland thundercats hammock</li>
             <li>vexillologist food truck</li>
           </ul>
-          <Button>Start Now</Button>
+          <Button theme="secondary">Start Now</Button>
         </Tile>
         <Tile color="yellow">
           <h3 className="h3 tile__h3">New Content, Daily</h3>
           <p className="copy tile__copy">Four loko drinking vinegar try-hard raw denim, pour-over la croix poke normcore bushwick chia enamel pin. Woke edison bulb typewriter quinoa unicorn.</p>
-          <Button>Start Now</Button>
+          <Button theme="secondary">Start Now</Button>
         </Tile>
         <Tile color="green">
           <h3 className="h3 tile__h3">Active Community</h3>
           <p className="copy tile__copy">Vape helvetica live-edge street art hella crucifix polaroid authentic farm-to-table ramps lumbersexual.</p>
-          <Button>Start Now</Button>
+          <Button theme="secondary">Start Now</Button>
         </Tile>
         <Tile color="red">
           <h3 className="h3 tile__h3">Meal Prep made easy</h3>
           <p className="copy tile__copy">Keytar vice small batch, poutine seitan next level occupy farm-to-table. Jean shorts kale chips everyday carry vinyl meditation. Umami shaman dreamcatcher gochujang, subway tile trust fund hammock.</p>
-          <Button>Start Now</Button>
+          <Button theme="secondary">Start Now</Button>
         </Tile>
       </TileWrapper>
     </Section>

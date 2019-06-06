@@ -1,0 +1,59 @@
+$burger-size: 36px;
+
+.hamburger {
+  position: relative;
+
+  justify-self: end;
+
+  width: $burger-size;
+  height: $burger-size;
+
+  background-color: gray(9);
+  border-radius: 50%;
+}
+
+.hamburger--menu-active {
+  .hamburger-bun--1 {
+    transform: rotate(-45deg) translate3d(-2px, 3px, 0);
+  }
+
+  .hamburger-bun--3 {
+    transform: rotate(45deg) translate3d(-2px, -4px, 0);
+  }
+
+  .hamburger-bun--2 {
+    opacity: 0;
+  }
+}
+
+.hamburger-bun {
+  position: absolute;
+  left: 8px;
+
+  width: ($burger-size / 2);
+  height: 2px;
+
+  background-color: gray(0);
+
+  transition: all 150ms ease-in-out;
+  transform-origin: center center;
+}
+
+.hamburger-bun--1 {
+  top: 12px;
+}
+
+.hamburger-bun--2 {
+  top: 16px;
+}
+
+.hamburger-bun--3 {
+  top: 20px;
+}
+
+
+@include breakpoint(medium) {
+  .hamburger {
+    display: none;
+  }
+}
