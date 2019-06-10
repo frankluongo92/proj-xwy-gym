@@ -7,6 +7,7 @@ import TileWrapper from '../components/TileWrapper';
 import Tile from '../components/Tile';
 
 import Button from '../elements/Button';
+import EmailSignup from '../components/EmailSignup';
 
 
 
@@ -49,6 +50,7 @@ const Home = () => {
         </Tile>
       </TileWrapper>
     </Section>
+    <EmailSignup />
     </>
   )
 }

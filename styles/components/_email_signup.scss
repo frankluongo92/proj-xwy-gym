@@ -1,0 +1,22 @@
+.email-signup-section {
+  display: flex;
+  justify-content: center;
+
+  padding: space(5) space(1);
+
+  background-image: url('/static/images/jonathan-borba-1339221-unsplash.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.email-signup-form {
+  @include container;
+}
+
+
+@include breakpoint (medium) {
+  .email-signup-section {
+    padding: space(12) space(3);
+  }
+}

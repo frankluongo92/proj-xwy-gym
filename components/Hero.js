@@ -22,8 +22,6 @@ const Hero = () => {
     from: { opacity: 0 }
   });
 
-  // const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-  // const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
   const parallaxUp = (y) => `translate3d(0, -${y / 8}px, 0)`
   const parallaxDown = (y) => `translate3d(0, ${y / 5}px, 0)`
 
@@ -44,7 +42,7 @@ const Hero = () => {
   }
 
   const removeScrollListener = ({ matches }) => {
-    if (!matches) { unobserveScroll(); }
+    matches ? observeScroll() : unobserveScroll() ;
   }
 
   threshold.addListener(removeScrollListener);
