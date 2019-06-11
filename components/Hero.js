@@ -8,7 +8,7 @@ import { animated, useSpring } from 'react-spring';
 const Hero = () => {
   // config: { mass: 10, tension: 150, friction: 240 }
   const [props, set] = useSpring(() => ({ y: 0, xy: [0, 0] }))
-  const threshold = window.matchMedia("(min-width: 960px)");
+  // const threshold = window.matchMedia("(min-width: 960px)");
 
   const onScroll = useCallback(
     (offset) => {
@@ -45,7 +45,7 @@ const Hero = () => {
     matches ? observeScroll() : unobserveScroll() ;
   }
 
-  threshold.addListener(removeScrollListener);
+  // threshold.addListener(removeScrollListener);
 
   return (
     <Waypoint onEnter={observeScroll} onLeave={unobserveScroll}>

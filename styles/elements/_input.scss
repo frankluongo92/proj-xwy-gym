@@ -13,10 +13,12 @@
 
 .input-placeholder {
   position: absolute;
-  top: 50%;
-  left: space(1);
+  top: 0;
+  left: 5px;
 
-  transform: translateY(-50%);
+  padding: space(0.5);
+
+  pointer-events: none;
 }
 
 .input-wrapper {
