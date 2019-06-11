@@ -15,14 +15,14 @@ const EmailSignup = () => {
   });
 
   function animatePlaceholderIn () {
-    setInputState(true)
     placeholder.current.innerText = "Email Address";
+    setInputState(true)
   }
 
   function animatePlaceholderOut () {
     if (!input.current.value.length > 0) {
-      setInputState(false)
       placeholder.current.innerText = "yourname@example.com";
+      setInputState(false)
     }
   }
 
