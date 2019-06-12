@@ -1,0 +1,56 @@
+@keyframes Gradient {
+	0% {
+		background-position: 0% 0%
+	}
+	100% {
+		background-position: 200% 100%
+	}
+}
+
+@mixin button-base {
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-appearance: none;
+
+  transition: all 150ms ease-in-out;
+}
+
+@mixin button-default {
+  font-size: 1rem;
+}
+
+@mixin button-theme($type) {
+  @if $type == 'primary' {
+    color: gray(0);
+
+  background: linear-gradient(to right, blue(5) 0%, blue(8) 100%);
+  background-size: 200% 200%;
+
+  &:focus,
+  &:hover {
+    transform: scale(1.25);
+    -webkit-animation: Gradient 500ms ease;
+    -moz-animation: Gradient 500ms ease;
+    animation: Gradient 500ms ease;
+  }
+  }
+
+  @if $type == 'secondary' {
+    color: gray(9);
+
+    background-color: rgba(255,255,255,0.75);
+    border: 1px solid gray(0);
+
+    &:focus,
+    &:hover {
+      background-color: gray(0);
+    }
+  }
+}

@@ -5,13 +5,10 @@
 
 .section-heading--light .section-heading__heading {
   color: gray(0);
+  @include text-shadow;
 }
 .section-heading--light .section-heading__copy {
   color: gray(2)
-}
-
-.section-heading__heading {
-  @include text-shadow;
 }
 
 .section-heading__heading {

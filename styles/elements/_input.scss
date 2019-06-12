@@ -1,13 +1,26 @@
 .input {
   display: block;
   min-height: space(4);
+}
 
+.input-button {
+  @include button-base;
+  @include button-default;
+  @include button-theme('primary');
+
+  width: 100%;
+
+  border-radius: 0;
+  border: none;
 }
 
 .input-text {
   position: relative;
 
   width: 100%;
+  padding-left: space(0.5);
+
+  font-size: 1rem;
 }
 
 
@@ -23,4 +36,15 @@
 
 .input-wrapper {
   position: relative;
+  width: 100%;
+}
+
+@include breakpoint (medium) {
+  .input-wrapper {
+    width: 80%;
+  }
+
+  .input-button {
+    width: 20%;
+  }
 }

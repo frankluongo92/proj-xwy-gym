@@ -1,0 +1,7 @@
+.call-to-action-tile-wrapper {
+  width: 100%;
+}
+
+.call-to-action-tile-wrapper__content {
+  @include container;
+}

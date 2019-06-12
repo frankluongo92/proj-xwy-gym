@@ -8,6 +8,8 @@ import Tile from '../components/Tile';
 
 import Button from '../elements/Button';
 import EmailSignup from '../components/EmailSignup';
+import CallToActionTile from '../components/CallToActionTile';
+import CallToActionTileWrapper from '../components/CallToActionTileWrapper';
 
 
 
@@ -49,6 +51,18 @@ const Home = () => {
           <Button theme="secondary">Start Now</Button>
         </Tile>
       </TileWrapper>
+    </Section>
+    <Section>
+      <SectionHeading
+        theme="dark"
+        heading="The xwy model"
+        copy="Leggings af narwhal crucifix authentic glossier cornhole pinterest godard tousled"
+      />
+      <CallToActionTileWrapper>
+        <CallToActionTile>
+          Ayyyee
+        </CallToActionTile>
+      </CallToActionTileWrapper>
     </Section>
     <EmailSignup />
     </>
