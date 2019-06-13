@@ -1,0 +1,18 @@
+@mixin cta-tile-subscription-type {
+  color: gray(7);
+  font-family: $heading;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+@mixin cta-tile-price {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+@mixin cta-tile-price-subtext {
+  color: gray(5);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}

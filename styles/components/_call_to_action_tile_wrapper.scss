@@ -5,3 +5,10 @@
 .call-to-action-tile-wrapper__content {
   @include container;
 }
+
+@include breakpoint(medium) {
+  .call-to-action-tile-wrapper__content {
+    @include grid;
+    grid-template-columns: 1fr 1.25fr 1fr
+  }
+}

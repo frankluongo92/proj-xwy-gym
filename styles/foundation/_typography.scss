@@ -1,6 +1,8 @@
 $heading: #{'Teko', sans-serif};
 $body: #{'Montserrat', sans-serif};
 
+// General Typography
+
 @mixin h1 {
   font-family: $heading;
   font-size: 2rem;
@@ -65,3 +67,7 @@ $body: #{'Montserrat', sans-serif};
     font-size: 1.125rem;
   }
 }
+
+
+// Component Typography
+@import 'typography/call_to_action_tiles';

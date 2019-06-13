@@ -1,3 +1,47 @@
-.call-to-action-tile {
+$cta-base: 'call-to-action-tile';
+
+.#{$cta-base} {
+  padding-bottom: space(2);
+
+  text-align: center;
+
   border: 1px solid gray(1);
+}
+
+.#{$cta-base}__copy {
+  padding: space(1);
+
+  color: gray(7);
+}
+
+.#{$cta-base}__divider {
+  height: pixelsToRems(2);
+  width: 80%;
+
+  margin: space(0.5) auto space(1);
+
+  background-color: blue(5);
+}
+
+.#{$cta-base}__image {
+  margin-bottom: space(1);
+  padding-top: 65%;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.#{$cta-base}__price {
+  @include cta-tile-price;
+}
+
+.#{$cta-base}__price-subtext {
+  margin-bottom: space(1.5);
+
+  @include cta-tile-price-subtext;
+}
+
+.#{$cta-base}__subscription-type {
+  @include cta-tile-subscription-type;
 }

@@ -59,9 +59,20 @@ const Home = () => {
         copy="Leggings af narwhal crucifix authentic glossier cornhole pinterest godard tousled"
       />
       <CallToActionTileWrapper>
-        <CallToActionTile>
-          Ayyyee
-        </CallToActionTile>
+        <CallToActionTile />
+        <CallToActionTile
+          copy='Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deleniti sit ipsum consequatur odio'
+          image='/static/images/kyle-johnson-389070-unsplash.jpg'
+          modifier='large'
+          price='$4.99'
+          subscriptionType='Premium'
+        />
+        <CallToActionTile
+          copy='Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim deleniti sit ipsum consequatur odio'
+          image='/static/images/meghan-holmes-1057329-unsplash.jpg'
+          price='$9.99'
+          subscriptionType='Platinum'
+        />
       </CallToActionTileWrapper>
     </Section>
     <EmailSignup />
