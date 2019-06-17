@@ -34,8 +34,8 @@
 
 @include breakpoint (small) {
   .hero {
-    padding-top: 20vh;
-    padding-bottom: 20vh;
+    padding-top: space(12);
+    padding-bottom: space(12);
   }
 
   .hero__text,

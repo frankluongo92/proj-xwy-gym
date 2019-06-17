@@ -1,0 +1,46 @@
+.footer {
+  background-color: gray(9);
+
+  padding: space(3) 0 space(5);
+}
+
+.footer__logo {
+  grid-column: span 12;
+
+  padding-bottom: space(5);
+
+  svg {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+
+    fill: gray(0);
+  }
+}
+
+.footer__links {
+  grid-column: span 12;
+}
+
+.footer__copyright {
+  grid-column: span 12;
+
+  margin-top: space(5);
+  padding: space(1) 0 space(3);
+
+  border-top: 1px solid gray(5);
+  color: gray(1);
+}
+
+.footer-navigation__styled-list {
+  text-align: center;
+}
+
+.footer-navigation__link  {
+  color: gray(1);
+}
+
+
+.logo--footer-navigation {
+  display: none;
+}

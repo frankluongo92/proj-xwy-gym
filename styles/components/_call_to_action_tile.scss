@@ -5,7 +5,39 @@ $cta-base: 'call-to-action-tile';
 
   text-align: center;
 
-  border: 1px solid gray(1);
+  border: 1px solid gray(2);
+  transition: opacity 150ms ease-in-out;
+
+  &--large {
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      position: absolute;
+      top: 42px;
+      right: -80px;
+
+      padding: space(0.25) space(5);
+
+      content: "Most Popular";
+
+      color: gray(0);
+      font-size: 0.75rem;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+
+      background-color: blue(5);
+      transform: rotate(45deg);
+      transition: background-color 150ms ease-in-out;
+    }
+
+    &:hover {
+      &:before {
+        background-color: secondary(red);
+      }
+    }
+  }
 }
 
 .#{$cta-base}__copy {

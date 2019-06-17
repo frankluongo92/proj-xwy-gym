@@ -1,5 +1,11 @@
 .call-to-action-tile-wrapper {
   width: 100%;
+
+  &:hover {
+    .call-to-action-tile:not(:hover) {
+      opacity: 0.5;
+    }
+  }
 }
 
 .call-to-action-tile-wrapper__content {
