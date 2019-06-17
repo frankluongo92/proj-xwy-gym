@@ -15,7 +15,6 @@ const Header = () => {
     marginTop: fixState ? 0 : '',
     width: fixState ? '100%' : '90%',
     left: fixState ? '0%' : '5%',
-    backgroundColor: fixState ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.75)',
   });
 
 

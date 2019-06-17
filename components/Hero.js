@@ -23,7 +23,7 @@ const Hero = () => {
   });
 
   const parallaxUp = (y) => `translate3d(0, -${y / 8}px, 0)`
-  const parallaxDown = (y) => `translate3d(0, ${y / 5}px, 0)`
+  const parallaxDown = (y) => `translate3d(0, -${y / 5}px, 0)`
 
   function updateScrollPosition() {
     onScroll(window.pageYOffset);

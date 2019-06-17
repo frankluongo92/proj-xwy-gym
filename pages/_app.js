@@ -3,6 +3,7 @@ import App, { Container } from 'next/app';
 import Head from 'next/head';
 
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../styles/app.scss"
 
 class MyApp extends App {
@@ -28,6 +29,7 @@ class MyApp extends App {
         <main className="main-content">
           <Component {...pageProps} />
         </main>
+        <Footer />
       </Container>
     );
   }
